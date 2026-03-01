@@ -1,5 +1,5 @@
-const Button = () => {
-  return <button>I am a button</button>;
+const Button = ({ text = "A Button", style = {} }) => {
+  return <button style={style}>{text}</button>;
 };
 
 export default Button;

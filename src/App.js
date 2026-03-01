@@ -5,7 +5,7 @@ function App() {
     <div>
       <h1>Honor and Glory</h1>
       <div>
-        <Button />
+        <Button text="whatever man" />
       </div>
     </div>
   );
