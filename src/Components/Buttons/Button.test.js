@@ -12,3 +12,7 @@ test("renders custom button with passes properties", () => {
   const button = screen.getByText(/stuff/i);
   expect(button).toBeInTheDocument();
 });
+
+// TODO : Add Test for styles
+
+// TODO : Add Test for on click events

@@ -4,7 +4,7 @@ import LogOut from "./Components/Auth/Logout";
 import GameList from "./Components/GameTypes/GameList";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div>
       <h1>Honor and Glory</h1>
