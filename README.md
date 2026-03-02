@@ -2,6 +2,15 @@
 
 A Game
 
+## Setup
+
+Type Checking
+In user settings ( settings.json) add the following line to enable type checking
+
+```json
+  "js/ts.implicitProjectConfig.checkJs": false,
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GameListItem from "./GameListItem";
 
 const GameList = () => {
   const [gameList, setGameList] = useState([
@@ -13,7 +14,7 @@ const GameList = () => {
       <h1>GameList</h1>
       <ul>
         {gameList.map((game) => {
-          return <li key={game.id}>{game.title}</li>;
+          return <GameListItem game={game} key={game.id} />;
         })}
       </ul>
     </div>
