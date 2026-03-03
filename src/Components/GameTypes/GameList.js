@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameListItem from "./GameListItem";
+import { getThing } from "../../api/testAction";
 
 const GameList = () => {
   const [gameList, setGameList] = useState([
@@ -8,6 +9,12 @@ const GameList = () => {
     { id: 3, title: "Mythic Eastern Fantasy" },
     { id: 4, title: "Space Opera" },
   ]);
+
+  useEffect(() => {
+    console.log("get game list");
+    let thing = getThing();
+    console.log(thing);
+  }, []);
 
   return (
     <div>
