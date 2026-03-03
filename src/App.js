@@ -3,6 +3,7 @@ import LogIn from "./Components/Auth/Login";
 import LogOut from "./Components/Auth/Logout";
 import GameList from "./Components/GameTypes/GameList";
 import Counter from "./Components/Counter/Counter/Counter";
+import TicTacToe from "./Components/TicTacToe/TicTacToe";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
@@ -11,6 +12,7 @@ function App() {
       <div>{isLoggedIn ? <LogOut /> : <LogIn />}</div>
       <GameList />
       <Counter />
+      <TicTacToe />
     </div>
   );
 }
