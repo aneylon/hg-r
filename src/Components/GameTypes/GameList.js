@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import GameListItem from "./GameListItem";
-import { getThing } from "../../api/testAction";
+import { getStuff, getThing } from "../../api/testAction";
 
 const GameList = () => {
   const [gameList, setGameList] = useState([
@@ -9,11 +9,15 @@ const GameList = () => {
     { id: 3, title: "Mythic Eastern Fantasy" },
     { id: 4, title: "Space Opera" },
   ]);
-
+  const tryFetch = () => {
+    fetch("http://localhost:4200");
+  };
   useEffect(() => {
     console.log("get game list");
     let thing = getThing();
     console.log(thing);
+    let stuff = getStuff();
+    console.log(stuff);
   }, []);
 
   return (

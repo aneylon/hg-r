@@ -11,6 +11,15 @@ In user settings ( settings.json) add the following line to enable type checking
   "js/ts.implicitProjectConfig.checkJs": false,
 ```
 
+## Todo
+
+- [ ] - Add Routing
+- [ ] - Add skeleton frame for game
+- [ ] - New game
+- [ ] - Existing game
+
+- [x] - Add JSON server for backend mocking / testing
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

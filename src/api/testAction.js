@@ -11,3 +11,15 @@ export const getThing = () => {
       throw error;
     });
 };
+
+export const getStuff = () => {
+  return Testing("http://localhost:4200/test")
+    .then((data) => {
+      console.log(data);
+      return data;
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
+};

@@ -1,0 +1,10 @@
+{
+  "test": { "name": "this is a test" },
+
+  "gameTypes": [
+    { "id": 1, "title": "Mythic Britain" },
+    { "id": 2, "title": "Weird Fantasy" },
+    { "id": 3, "title": "Mythic Eastern Fantasy" },
+    { "id": 4, "title": "Space Opera" }
+  ]
+}
