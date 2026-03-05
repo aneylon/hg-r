@@ -20,6 +20,17 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [x] - Add JSON server for backend mocking / testing
 
+- [ ] - Add version context
+- [ ] - Check version on each http request
+- [ ] - add version display component
+- [ ] - Add modal to notify user when version is out dated.
+
+## Testing
+
+Using :
+[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+[Jest DOM](https://github.com/testing-library/jest-dom)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
