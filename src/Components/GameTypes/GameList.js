@@ -16,8 +16,9 @@ const GameList = () => {
     console.log("get game list");
     let thing = getThing();
     console.log(thing);
-    let stuff = getStuff();
-    console.log(stuff);
+    //TODO : handle error?
+    // let stuff = getStuff();
+    // console.log(stuff);
   }, []);
 
   return (
