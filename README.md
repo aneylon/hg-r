@@ -20,7 +20,7 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [x] - Add JSON server for backend mocking / testing
 
-- [ ] - Add version context
+- [x] - Add version context
 - [ ] - Check version on each http request
 - [ ] - add version display component
 - [ ] - Add modal to notify user when version is out dated.
