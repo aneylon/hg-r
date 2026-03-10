@@ -15,6 +15,7 @@ const GameList = () => {
   //   fetch("http://localhost:4200");
   // };
   useEffect(() => {
+    // TODO : Refactor to use useFetch...
     console.log("get game list");
     let thing = getThing();
     console.log(thing);

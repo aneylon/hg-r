@@ -6,7 +6,7 @@ const useFetch = () => {
   const [data, setData] = useState(null);
 
   const request = async (url, method, body) => {
-    // TODO : Do the request
+    // TODO : Check Version
     setIsLoading(true);
     let options = {
       method,
