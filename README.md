@@ -26,6 +26,7 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - Add modal to notify user when version is out dated.
 
 - [ ] - Add Testing
+- [ ] - Fix hook and context tests
   - [ ] - Add Jest Testing
     - [ ] - Configure to run both kinds of tests separately
 
