@@ -19,18 +19,22 @@ const useFetch = () => {
     // TODO : Add auth header
 
     // TODO : Wrap in try catch?
-    const response = await fetch(url, options);
-    console.log({ response });
-    if (response.ok) {
-      let responseData = await response.json();
-      console.log({ responseData });
-      setData(responseData);
-      setIsLoading(false);
-    } else {
-      console.error(response.message);
-      setError(response.message);
-      setIsLoading(false);
-      throw new Error(response.message);
+    try {
+      const response = await fetch(url, options);
+      console.log({ response });
+      if (response.ok) {
+        let responseData = await response.json();
+        console.log({ responseData });
+        setData(responseData);
+        setIsLoading(false);
+      } else {
+        console.error(response.message);
+        setError(response.message);
+        setIsLoading(false);
+        throw new Error(response.message);
+      }
+    } catch (error) {
+      console.error("Fetch error", error);
     }
   };
 

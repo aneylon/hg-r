@@ -6,6 +6,7 @@ import Counter from "./Components/Counter/Counter/Counter";
 import TicTacToe from "./Components/TicTacToe/TicTacToe";
 import Greeting from "./Components/Auth/Greeting";
 import { useUser } from "./Context/UserContext";
+import FiveAway from "./Components/FiveAway/FiveAway";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -15,6 +16,7 @@ function App() {
       {/* <div>{isLoggedIn ? <LogOut /> : <LogIn />}</div> */}
       <div>{user ? <LogOut /> : <LogIn />}</div>
       <Greeting />
+      <FiveAway />
       <GameList />
       <Counter />
       <TicTacToe />
