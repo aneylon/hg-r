@@ -4,7 +4,7 @@ const InteractiveMap = () => {
       <h1>Interactive Map</h1>
       <div>
         <img
-          src="SimpleExampleTown.png"
+          src="SimpleExampleTown.webp"
           alt="Simple Example Town"
           useMap="#myMap"
         />

@@ -1,0 +1,24 @@
+.mapHolder {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  background-image: url("TownTwo.webp");
+  background-color: darkgray;
+  background-size: contain;
+}
+
+.townCircle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  /* background-color: lightgray; */
+  /* border-style: solid; */
+  border-radius: 50%;
+  border-color: lightgray;
+  border-width: 1px;
+}
+.townCircle:hover {
+  /* background-color: white; */
+  box-shadow: 0px 0px 10px black;
+  background-color: rgba(255, 255, 255, 0.1);
+}

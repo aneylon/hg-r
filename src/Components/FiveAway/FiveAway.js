@@ -1,4 +1,5 @@
 import InteractiveMap from "../InteractiveMap/InteractiveMap";
+import MapStyles from "../InteractiveMap/MapStyles";
 import NewGame from "./NewGame";
 
 const FiveAway = () => {
@@ -7,6 +8,7 @@ const FiveAway = () => {
       <h1>Five Away</h1>
       <NewGame />
       <InteractiveMap />
+      <MapStyles />
     </div>
   );
 };
