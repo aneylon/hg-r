@@ -30,6 +30,11 @@ In user settings ( settings.json) add the following line to enable type checking
   - [ ] - Add Jest Testing
     - [ ] - Configure to run both kinds of tests separately
 
+- [ ] - Interactive Maps
+  - [ ] - Basic interactive map with <map><area>
+  - [ ] - Try react-image-mapper for interactive map
+  - [ ] - Try D3 for interactive map
+
 ## Testing
 
 Using :
