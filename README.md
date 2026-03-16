@@ -31,7 +31,9 @@ In user settings ( settings.json) add the following line to enable type checking
     - [ ] - Configure to run both kinds of tests separately
 
 - [ ] - Interactive Maps
-  - [ ] - Basic interactive map with <map><area>
+  - [ ] - add tool tip
+  - [x] - use just css and html
+  - [x] - Basic interactive map with <map><area>
   - [ ] - Try react-image-mapper for interactive map
   - [ ] - Try D3 for interactive map
 
