@@ -1,21 +1,83 @@
 const BorderLandsCharacter = () => {
   return (
-    <div>
+    <div className="character">
       <form action="">
-        <label htmlFor="">Name :</label>
-        <label htmlFor="">Origin :</label>
-        <label htmlFor="">Agility :</label>
-        <label htmlFor="">Speed :</label>
-        <label htmlFor="">Combat Skill :</label>
-        <label htmlFor="">Tough :</label>
-        <label htmlFor="">Armor :</label>
-        <label htmlFor="">Luck :</label>
-        <label htmlFor="">Will :</label>
-        <label htmlFor="">Recovery :</label>
-        <label htmlFor="">Traits :</label>
-        <label htmlFor="">Equipment :</label>
-        <label htmlFor="">XP :</label>
-        <label htmlFor="">Advancements :</label>
+        <div>
+          <label htmlFor="characterName">Name :</label>
+          <input
+            type="text"
+            name="characterName"
+            id="characterName"
+            placeholder="Name"
+          />
+        </div>
+        <div>
+          <label htmlFor="origin">Origin :</label>
+          <input type="text" name="origin" id="origin" placeholder="Origin" />
+        </div>
+        <div>
+          <label htmlFor="agility">Agility :</label>
+          <input
+            type="text"
+            name="agility"
+            id="agility"
+            placeholder="Agility"
+          />
+          <label htmlFor="speed">Speed :</label>
+          <input type="text" name="speed" id="speed" placeholder="Skill" />
+        </div>
+        <div>
+          <label htmlFor="combatSkill">Combat Skill :</label>
+          <input
+            type="text"
+            name="combatSkill"
+            id="combatSkill"
+            placeholder="Combat Skill"
+          />
+        </div>
+        <div>
+          <label htmlFor="tough">Tough :</label>
+          <input type="text" name="tough" id="tough" placeholder="Tough" />
+          <label htmlFor="armor">Armor :</label>
+          <input type="text" name="armor" id="armor" placeholder="Armor" />
+        </div>
+        <div>
+          <label htmlFor="luck">Luck :</label>
+          <input type="text" name="luck" id="luck" placeholder="Luck" />
+          <label htmlFor="will">Will :</label>
+          <input type="text" name="will" id="will" placeholder="Will" />
+          <label htmlFor="recovery">Recovery :</label>
+          <input
+            type="text"
+            name="recovery"
+            id="recovery"
+            placeholder="Recovery"
+          />
+        </div>
+        <div>
+          <label htmlFor="traits">Traits :</label>
+          <input type="text" name="traits" id="traits" placeholder="Traits" />
+        </div>
+        <div>
+          <label htmlFor="equipment">Equipment :</label>
+          <input
+            type="text"
+            name="equipment"
+            id="equipment"
+            placeholder="Equipment"
+          />
+        </div>
+        <div>
+          <label htmlFor="xp">XP :</label>
+          <input type="text" name="xp" id="xp" placeholder="XP" />
+          <label htmlFor="advancements">Advancements :</label>
+          <input
+            type="text"
+            name="advancements"
+            id="advancements"
+            placeholder="Advancements"
+          />
+        </div>
       </form>
     </div>
   );
