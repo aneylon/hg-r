@@ -26,13 +26,17 @@
 .toolTip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* Add dots under the hoverable text */
+  /* border-bottom: 1px dotted black;  */
+  /* Add dots under the hoverable text */
   cursor: pointer;
+  width: 50px;
+  height: 50px;
 }
 
 /* Tooltip text */
 .toolTipText {
-  visibility: hidden; /* Hidden by default */
+  visibility: hidden;
+  /* Hidden by default */
   width: 130px;
   background-color: black;
   color: #ffffff;
@@ -40,7 +44,8 @@
   padding: 5px 0;
   border-radius: 6px;
   position: absolute;
-  z-index: 1; /* Ensure tooltip is displayed above content */
+  z-index: 1;
+  /* Ensure tooltip is displayed above content */
 }
 
 /* Show the tooltip text on hover */
