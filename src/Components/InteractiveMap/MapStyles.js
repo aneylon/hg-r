@@ -1,4 +1,5 @@
 import "./mapStyles.css";
+import ToolTip from "./ToolTip";
 
 const MapStyles = () => {
   return (
@@ -14,10 +15,16 @@ const MapStyles = () => {
         ></div>
 
         <div className="townCircle" style={{ bottom: 75, right: 100 }}>
-          <div className="toolTip">
-            {" "}
-            <span className="toolTipText">Just a test</span>
-          </div>
+          <ToolTip
+            description={
+              <>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Suscipit placeat molestiae possimus consequatur iusto deleniti
+                neque quae, pariatur vero reiciendis similique laborum veritatis
+                repudiandae ea soluta facilis ratione doloremque quam?
+              </>
+            }
+          />
         </div>
       </div>
     </div>

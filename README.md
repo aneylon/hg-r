@@ -18,6 +18,9 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - New game
 - [ ] - Existing game
 
+- [x] - Borderlands sheet
+  - [x] - Character sheet
+
 - [x] - Add JSON server for backend mocking / testing
 
 - [x] - Add version context
@@ -31,11 +34,11 @@ In user settings ( settings.json) add the following line to enable type checking
     - [ ] - Configure to run both kinds of tests separately
 
 - [ ] - Interactive Maps
-  - [ ] - add tool tip
+  - [x] - add tool tip
   - [x] - use just css and html
   - [x] - Basic interactive map with <map><area>
-  - [ ] - Try react-image-mapper for interactive map
-  - [ ] - Try D3 for interactive map
+  - [-] - Try react-image-mapper for interactive map
+  - [-] - Try D3 for interactive map
 
 ## Testing
 

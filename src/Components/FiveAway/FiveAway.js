@@ -1,7 +1,6 @@
-import InteractiveMap from "../InteractiveMap/InteractiveMap";
 import MapLocation from "../InteractiveMap/MapLocation";
 import MapStyles from "../InteractiveMap/MapStyles";
-import BorderLandsCharacter from "./BorderLandsCharacter";
+import DeepBelowRoster from "./DeepBelowRoster";
 import NewGame from "./NewGame";
 
 const FiveAway = () => {
@@ -32,8 +31,7 @@ const FiveAway = () => {
     <div>
       <h1>Five Away</h1>
       <NewGame />
-      {/* <InteractiveMap /> */}
-      <BorderLandsCharacter />
+      <DeepBelowRoster />
       <MapLocation
         title={locations[0].title}
         description={locations[0].description}

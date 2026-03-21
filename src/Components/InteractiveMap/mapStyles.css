@@ -39,9 +39,10 @@
   /* Hidden by default */
   width: 130px;
   background-color: black;
-  color: #ffffff;
-  text-align: center;
-  padding: 5px 0;
+  color: lightgray;
+  text-align: left;
+  margin: 0 50px;
+  padding: 5px;
   border-radius: 6px;
   position: absolute;
   z-index: 1;
