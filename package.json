@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "devDB": "json-server ./tools/db.json -p 4200"
+    "devDB": "json-server ./tools/db.json -p 4200",
+    "updateVersion": "node ./tools/make-version-file.js"
   },
   "eslintConfig": {
     "extends": [
