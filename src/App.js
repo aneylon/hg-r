@@ -7,6 +7,7 @@ import TicTacToe from "./Components/TicTacToe/TicTacToe";
 import Greeting from "./Components/Auth/Greeting";
 import { useUser } from "./Context/UserContext";
 import FiveAway from "./Components/FiveAway/FiveAway";
+import Version from "./Components/Version/Version";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -15,11 +16,14 @@ function App() {
       <h1>Honor and Glory</h1>
       {/* <div>{isLoggedIn ? <LogOut /> : <LogIn />}</div> */}
       <div>{user ? <LogOut /> : <LogIn />}</div>
-      <Greeting />
+      {/*
+       <Greeting />
       <FiveAway />
       <GameList />
       <Counter />
-      <TicTacToe />
+      <TicTacToe /> 
+      */}
+      <Version />
     </div>
   );
 }
