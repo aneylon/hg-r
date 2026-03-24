@@ -54,5 +54,15 @@
       "name": "The Carnival of Masks"
     }
   ],
+  "locations": [
+    {
+      "id": 1,
+      "title": "one",
+      "description": "place one",
+      "boon": "a boon",
+      "curse": "a curse",
+      "connections": []
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

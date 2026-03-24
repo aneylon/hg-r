@@ -10,6 +10,8 @@ import FiveAway from "./Components/FiveAway/FiveAway";
 import Version from "./Components/Version/Version";
 import Warband from "./Components/AureliaSancta/Warband";
 import Warbands from "./Components/AureliaSancta/Warbands";
+import LocationAdd from "./Components/AureliaSancta/LocationAdd";
+import LocationList from "./Components/AureliaSancta/LocationList";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -24,9 +26,11 @@ function App() {
       <GameList />
       <Counter />
       <TicTacToe /> 
-      */}
       <Warbands />
       <Warband />
+      */}
+      <LocationAdd />
+      <LocationList />
       <Version />
     </div>
   );
