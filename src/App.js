@@ -8,6 +8,8 @@ import Greeting from "./Components/Auth/Greeting";
 import { useUser } from "./Context/UserContext";
 import FiveAway from "./Components/FiveAway/FiveAway";
 import Version from "./Components/Version/Version";
+import Warband from "./Components/AureliaSancta/Warband";
+import Warbands from "./Components/AureliaSancta/Warbands";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -23,6 +25,8 @@ function App() {
       <Counter />
       <TicTacToe /> 
       */}
+      <Warbands />
+      <Warband />
       <Version />
     </div>
   );

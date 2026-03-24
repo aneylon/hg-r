@@ -1,10 +1,58 @@
 {
-  "test": { "name": "this is a test" },
-
+  "test": {
+    "name": "this is a test"
+  },
   "gameTypes": [
-    { "id": 1, "title": "Mythic Britain" },
-    { "id": 2, "title": "Weird Fantasy" },
-    { "id": 3, "title": "Mythic Eastern Fantasy" },
-    { "id": 4, "title": "Space Opera" }
-  ]
+    {
+      "id": "1",
+      "title": "Mythic Britain"
+    },
+    {
+      "id": "2",
+      "title": "Weird Fantasy"
+    },
+    {
+      "id": "3",
+      "title": "Mythic Eastern Fantasy"
+    },
+    {
+      "id": "4",
+      "title": "Space Opera"
+    }
+  ],
+  "warbands": [
+    {
+      "id": "1",
+      "name": "Knightly Retinues"
+    },
+    {
+      "id": "2",
+      "name": "The Inquisition"
+    },
+    {
+      "id": "3",
+      "name": "Pilgrims of the Broken Cross"
+    },
+    {
+      "id": "4",
+      "name": "The Crescent Brotherhood"
+    },
+    {
+      "id": "f6d2",
+      "name": "Guild of Freetraders"
+    },
+    {
+      "id": "4702",
+      "name": "Brothers of the Black Cart"
+    },
+    {
+      "id": "efb4",
+      "name": "The Sundered Cult"
+    },
+    {
+      "id": "578b",
+      "name": "The Carnival of Masks"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
