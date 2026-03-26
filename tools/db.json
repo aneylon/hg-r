@@ -20,6 +20,20 @@
       "title": "Space Opera"
     }
   ],
+  "userWarbands": [
+    {
+      "id": "1",
+      "name": "User Warband One",
+      "typeName": "Knightly Retinues",
+      "typeId": "1"
+    },
+    {
+      "id": "2",
+      "name": "User Warband Two",
+      "typeName": "The Inquisition",
+      "typeId": "2"
+    }
+  ],
   "warbands": [
     {
       "id": "1",
@@ -56,12 +70,30 @@
   ],
   "locations": [
     {
-      "id": 1,
+      "id": "1",
       "title": "one",
       "description": "place one",
       "boon": "a boon",
       "curse": "a curse",
       "connections": []
+    },
+    {
+      "id": "5820",
+      "title": "tit",
+      "description": "des",
+      "boon": null,
+      "curse": null,
+      "connections": [],
+      "controllingWarband": null
+    },
+    {
+      "id": "e4e4",
+      "title": "was",
+      "description": "saw",
+      "boon": null,
+      "curse": null,
+      "connections": [],
+      "controllingWarband": "2"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

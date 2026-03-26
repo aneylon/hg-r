@@ -23,8 +23,19 @@ const LocationList = () => {
               <li key={location.id}>
                 <p>{location.title}</p>
                 <p>{location.description}</p>
-                <p>boon: {location.boon}</p>
-                <p>curse: {location.curse}</p>
+                <p>boon : {location.boon}</p>
+                <p>curse : {location.curse}</p>
+                <div>
+                  <p>connections : </p>
+                  <ul>
+                    {location.connections.map((connections) => {
+                      return;
+                    })}
+                  </ul>
+                </div>
+                {location.controller && (
+                  <p>controller: {location.controller}</p>
+                )}
               </li>
             );
           })}
