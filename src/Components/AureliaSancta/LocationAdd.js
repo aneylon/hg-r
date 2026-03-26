@@ -9,6 +9,7 @@ const LocationAdd = () => {
   const [connections, setConnections] = useState([]);
   const [controllingWarband, setControllingWarband] = useState(null);
   const [formError, setFormError] = useState(null);
+  const [selectedConnection, setSelectedConnection] = useState(null);
 
   const {
     data: locationData,
@@ -30,6 +31,17 @@ const LocationAdd = () => {
     error: newLocationError,
     request: newLocationRequest,
   } = useFetch();
+
+  const formValid = () => {
+    if (
+      title !== null &&
+      title !== "" &&
+      description !== null &&
+      description !== ""
+    )
+      return true;
+    else return false;
+  };
 
   const addNewLocation = () => {
     console.log("add new location");
@@ -124,7 +136,16 @@ const LocationAdd = () => {
             <div className="errorText">{locationError.message}</div>
           )}
           <label>Connections : </label>
-          <select name="connections" id="connections">
+          <select
+            name="selectedConnection"
+            id="selectedConnection"
+            value={selectedConnection}
+            onChange={(e) => {
+              let con = e.target.value;
+              console.log("selected connection", con);
+              setSelectedConnection(con);
+            }}
+          >
             <option value="" selected>
               None
             </option>
@@ -167,7 +188,9 @@ const LocationAdd = () => {
           </select>
         </div>
       </div>
-      <button onClick={addNewLocation}>Add New Location</button>
+      <button onClick={addNewLocation} disabled={!formValid()}>
+        Add New Location
+      </button>
       {formError && <div className="errorText">{formError}</div>}
     </div>
   );
