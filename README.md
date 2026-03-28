@@ -18,6 +18,9 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - New game
 - [ ] - Existing game
 
+- [ ] - Locations
+- [ ] - Size and Locations properties
+
 - [x] - Borderlands sheet
   - [x] - Character sheet
 

@@ -75,7 +75,15 @@
       "description": "place one",
       "boon": "a boon",
       "curse": "a curse",
-      "connections": []
+      "connections": [],
+      "size": {
+        "width": "50px",
+        "height": "50px"
+      },
+      "location": {
+        "x": "75px",
+        "y": "75px"
+      }
     },
     {
       "id": "5820",
