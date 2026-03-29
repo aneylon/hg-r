@@ -10,6 +10,8 @@ const LocationAdd = () => {
   const [controllingWarband, setControllingWarband] = useState(null);
   const [formError, setFormError] = useState(null);
   const [selectedConnection, setSelectedConnection] = useState(null);
+  const [size, setSize] = useState({});
+  const [location, setLocation] = useState({});
 
   const {
     data: locationData,
@@ -46,15 +48,18 @@ const LocationAdd = () => {
   const addNewLocation = () => {
     console.log("add new location");
     setFormError(null);
+    let newLocation = {
+      title,
+      description,
+      boon,
+      curse,
+      connections,
+      controllingWarband,
+      location,
+      size,
+    };
     if (title !== null && description !== null) {
-      newLocationRequest("http://localhost:4200/locations", "POST", {
-        title,
-        description,
-        boon,
-        curse,
-        connections,
-        controllingWarband,
-      })
+      newLocationRequest("http://localhost:4200/locations", "POST", newLocation)
         .then((stuff) => {
           console.log("then", stuff);
         })
@@ -186,6 +191,56 @@ const LocationAdd = () => {
                 );
               })}
           </select>
+        </div>
+        <div>
+          <label htmlFor="size">Size : </label>
+          <label htmlFor="width">Width : </label>
+          <input
+            type="number"
+            name="width"
+            id="width"
+            placeholder="Width"
+            value={size.width}
+            onChange={(e) => {
+              setSize({ ...size, width: e.target.value });
+            }}
+          />
+          <label htmlFor="height">Height : </label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            placeholder="Height"
+            value={size.height}
+            onChange={(e) => {
+              setSize({ ...size, height: e.target.value });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="size">Location : </label>
+          <label htmlFor="x">X : </label>
+          <input
+            type="number"
+            name="x"
+            id="x"
+            placeholder="X"
+            value={location.x}
+            onChange={(e) => {
+              setLocation({ ...location, x: e.target.value });
+            }}
+          />
+          <label htmlFor="y">Y : </label>
+          <input
+            type="number"
+            name="y"
+            id="y"
+            placeholder="Y"
+            value={location.y}
+            onChange={(e) => {
+              setLocation({ ...location, y: e.target.value });
+            }}
+          />
         </div>
       </div>
       <button onClick={addNewLocation} disabled={!formValid()}>
