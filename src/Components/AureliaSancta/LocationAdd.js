@@ -10,8 +10,8 @@ const LocationAdd = () => {
   const [controllingWarband, setControllingWarband] = useState(null);
   const [formError, setFormError] = useState(null);
   const [selectedConnection, setSelectedConnection] = useState(null);
-  const [size, setSize] = useState({});
-  const [location, setLocation] = useState({});
+  const [size, setSize] = useState({ width: "", height: "" });
+  const [location, setLocation] = useState({ x: "", y: "" });
 
   const {
     data: locationData,
@@ -39,7 +39,19 @@ const LocationAdd = () => {
       title !== null &&
       title !== "" &&
       description !== null &&
-      description !== ""
+      description !== "" &&
+      boon !== null &&
+      boon !== "" &&
+      curse !== null &&
+      curse !== "" &&
+      location.x !== "" &&
+      location.x !== null &&
+      location.y !== "" &&
+      location.y !== null &&
+      size.width !== null &&
+      size.width !== "" &&
+      size.height !== null &&
+      size.height !== ""
     )
       return true;
     else return false;
