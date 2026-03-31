@@ -4,6 +4,10 @@ import useFetch from "../../Hooks/useFetch";
 const LocationList = () => {
   const { data, error, isLoading, request } = useFetch();
 
+  const editLocation = (id) => {
+    console.log("Edit location : ", id);
+  };
+
   useEffect(() => {
     request("http://localhost:4200/locations");
   }, []);
@@ -36,6 +40,7 @@ const LocationList = () => {
                 {location.controller && (
                   <p>controller: {location.controller}</p>
                 )}
+                <button onClick={editLocation(location.id)}>Edit</button>
               </li>
             );
           })}
