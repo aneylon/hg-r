@@ -13,6 +13,7 @@ import Warbands from "./Components/AureliaSancta/Warbands";
 import LocationAdd from "./Components/AureliaSancta/LocationAdd";
 import LocationList from "./Components/AureliaSancta/LocationList";
 import About from "./Components/AureliaSancta/About";
+import Campaign from "./Components/AureliaSancta/Campaign";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -31,7 +32,7 @@ function App() {
       <Warband />
       */}
       <LocationAdd />
-      <LocationList />
+      <Campaign />
       <About />
       <Version />
     </div>
