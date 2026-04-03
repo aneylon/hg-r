@@ -28,20 +28,13 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [x] - Add version context
 - [ ] - Check version on each http request
-- [ ] - add version display component
+- [x] - add version display component
 - [ ] - Add modal to notify user when version is out dated.
 
 - [ ] - Add Testing
 - [ ] - Fix hook and context tests
   - [ ] - Add Jest Testing
     - [ ] - Configure to run both kinds of tests separately
-
-- [ ] - Interactive Maps
-  - [x] - add tool tip
-  - [x] - use just css and html
-  - [x] - Basic interactive map with <map><area>
-  - [-] - Try react-image-mapper for interactive map
-  - [-] - Try D3 for interactive map
 
 ## Testing
 
