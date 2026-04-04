@@ -91,9 +91,7 @@ const LocationAdd = () => {
   };
 
   useEffect(() => {
-    console.log("get locations");
     locationRequest("http://localhost:4200/locations");
-    console.log("get user warbands");
     warbandRequest("http://localhost:4200/userWarbands");
   }, []);
 

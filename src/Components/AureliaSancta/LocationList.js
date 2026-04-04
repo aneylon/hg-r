@@ -40,7 +40,7 @@ const LocationList = () => {
                 {location.controller && (
                   <p>controller: {location.controller}</p>
                 )}
-                <button onClick={editLocation(location.id)}>Edit</button>
+                <button onClick={() => editLocation(location.id)}>Edit</button>
               </li>
             );
           })}

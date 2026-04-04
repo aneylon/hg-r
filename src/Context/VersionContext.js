@@ -2,8 +2,12 @@ import { createContext, useState, useEffect } from "react";
 
 export const VersionContext = createContext();
 
+const envVersion = process.env.REACT_APP_VERSION;
+console.log(envVersion);
+
 const VersionContextProvider = (props) => {
   const [version, setVersion] = useState(null);
+  const [outOfDate, setOutOfDate] = useState("false");
 
   const getVersion = () => {
     fetch("./version.json")
@@ -12,7 +16,15 @@ const VersionContextProvider = (props) => {
         // TODO : handle unable to get version file
       })
       .then((ver) => {
-        setVersion(ver.version);
+        let jsonVersion = ver.version;
+        console.log(jsonVersion, envVersion);
+        if (jsonVersion !== envVersion) {
+          setOutOfDate("true");
+          setVersion(ver.version);
+        } else {
+          setOutOfDate("false");
+          setVersion(ver.version);
+        }
       });
   };
 
@@ -21,7 +33,7 @@ const VersionContextProvider = (props) => {
   }, []);
 
   return (
-    <VersionContext.Provider value={version}>
+    <VersionContext.Provider value={{ version, outOfDate, setOutOfDate }}>
       {props.children}
     </VersionContext.Provider>
   );

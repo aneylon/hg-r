@@ -11,6 +11,10 @@ In user settings ( settings.json) add the following line to enable type checking
   "js/ts.implicitProjectConfig.checkJs": false,
 ```
 
+```.env file
+  REACT_APP_VERSION = Current Version ( ex: 0.0.1a)
+```
+
 ## Todo
 
 - [ ] - Add Routing
