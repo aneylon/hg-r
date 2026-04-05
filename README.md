@@ -25,6 +25,13 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - Locations
 - [ ] - Size and Locations properties
 
+- [ ] - DB Mapping
+  - [ ] - User
+  - [ ] - Campaign
+  - [ ] - Warbands
+  - [ ] - Locations
+  - [ ] - Maps
+
 - [x] - Borderlands sheet
   - [x] - Character sheet
 
