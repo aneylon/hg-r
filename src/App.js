@@ -15,6 +15,7 @@ import LocationList from "./Components/AureliaSancta/LocationList";
 import About from "./Components/AureliaSancta/About";
 import Campaign from "./Components/AureliaSancta/Campaign";
 import Modal from "./Components/Modal/Modal";
+import VersionModal from "./Components/Modal/VersionModal";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -36,7 +37,7 @@ function App() {
       <Campaign />
       <About />
       <Version />
-      <Modal show={true} />
+      <VersionModal />
     </div>
   );
 }
