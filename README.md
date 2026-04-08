@@ -19,6 +19,8 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [ ] - Set up automatic deployment
 
+- [ ] - Basic html and css layout
+
 - [ ] - Add Routing
 - [ ] - Add skeleton frame for game
 - [ ] - New game
