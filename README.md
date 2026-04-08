@@ -17,6 +17,8 @@ In user settings ( settings.json) add the following line to enable type checking
 
 ## Todo
 
+- [ ] - Set up automatic deployment
+
 - [ ] - Add Routing
 - [ ] - Add skeleton frame for game
 - [ ] - New game
