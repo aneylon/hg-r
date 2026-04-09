@@ -16,6 +16,7 @@ import About from "./Components/AureliaSancta/About";
 import Campaign from "./Components/AureliaSancta/Campaign";
 import Modal from "./Components/Modal/Modal";
 import VersionModal from "./Components/Modal/VersionModal";
+import SignUp from "./Components/Auth/SignUp";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -24,6 +25,7 @@ function App() {
       <h1>Honor and Glory</h1>
       {/* <div>{isLoggedIn ? <LogOut /> : <LogIn />}</div> */}
       <div>{user ? <LogOut /> : <LogIn />}</div>
+      <SignUp />
       {/*
        <Greeting />
       <FiveAway />
@@ -37,7 +39,7 @@ function App() {
       <Campaign />
       <About />
       <Version />
-      <VersionModal />
+      {/* <VersionModal /> */}
     </div>
   );
 }
