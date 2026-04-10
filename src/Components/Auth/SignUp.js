@@ -1,15 +1,29 @@
 import { useState } from "react";
+import useFetch from "../../Hooks/useFetch";
 
 const SignUp = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
+  const { error, isLoading, data, request } = useFetch();
+
   const signUp = () => {
-    console.log("sign up", email, password);
-    // TODO : Add try/catch/finally.
-    // TODO : use fetch to post signup info.
-    setEmail("");
-    setPassword("");
+    request("http://localhost:4200/user", "POST", {
+      email: email,
+      password: password,
+    })
+      .then((result) => {
+        console.log(result);
+        // TODO : Set user data.
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+      .finally(() => {
+        console.log("last");
+        setEmail("");
+        setPassword("");
+      });
   };
 
   return (
@@ -26,8 +40,8 @@ const SignUp = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          />{" "}
-          <span>{email}</span>
+            disabled={isLoading}
+          />
         </div>
         <div>
           <label htmlFor="password">Password : </label>
@@ -39,10 +53,11 @@ const SignUp = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />{" "}
-          <span>{password}</span>
+            disabled={isLoading}
+          />
         </div>
-        <input type="submit" value="Sign Up" />
+        <input type="submit" value="Sign Up" disabled={isLoading} />
+        {error && <div className="errorText">{error.message}</div>}
       </form>
     </div>
   );

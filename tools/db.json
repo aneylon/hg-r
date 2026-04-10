@@ -1,7 +1,16 @@
 {
-  "test": {
-    "name": "this is a test"
-  },
+  "user": [
+    {
+      "id": "1",
+      "email": "admin@test.com",
+      "password": "test"
+    },
+    {
+      "id": "84c7",
+      "email": "test@t",
+      "password": "test"
+    }
+  ],
   "gameTypes": [
     {
       "id": "1",
