@@ -1,11 +1,28 @@
 import { useState } from "react";
 import useFetch from "../../Hooks/useFetch";
+import validator from "validator";
 
 const SignUp = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
   const { error, isLoading, data, request } = useFetch();
+
+  const valid = () => {
+    if (
+      email !== "" &&
+      email !== null &&
+      email !== undefined &&
+      validator.isEmail(email) &&
+      password !== "" &&
+      password !== null &&
+      password !== undefined
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   const signUp = () => {
     request("http://localhost:4200/user", "POST", {
@@ -56,7 +73,7 @@ const SignUp = () => {
             disabled={isLoading}
           />
         </div>
-        <input type="submit" value="Sign Up" disabled={isLoading} />
+        <input type="submit" value="Sign Up" disabled={isLoading || !valid()} />
         {error && <div className="errorText">{error.message}</div>}
       </form>
     </div>
