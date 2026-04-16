@@ -54,6 +54,7 @@ const LogIn = () => {
         <div>
           <label htmlFor="email">Email : </label>
           <input
+            className="input-field"
             type="email"
             name="email"
             id="email"
