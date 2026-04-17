@@ -17,6 +17,8 @@ In user settings ( settings.json) add the following line to enable type checking
 
 ## Todo
 
+- [x] - Set up css variables for colors
+
 - [ ] - Set up automatic deployment
 
 - [ ] - Basic html and css layout

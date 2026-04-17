@@ -1,16 +1,28 @@
+:root {
+  --paynes-grey: #383b4b;
+  --burnt-sienna: #e97451;
+  --raw-sienna: #d68a59;
+  --raw-umber: #826644;
+  --burnt-umber: #8a3324;
+  --yellow-ochre: #cb9d06;
+  --pthalo-green: #123524;
+  --pthalo-blue: #000f89;
+}
+
 * {
-  background-color: #2c2e2d;
+  background-color: var(--paynes-grey);
+  /* background-color: #2c2e2d; */
   /* background-color: black; */
   color: #a1a19b;
 }
 
 .errorText {
-  color: red;
+  color: var(--burnt-sienna);
 }
 
 .input-field {
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid var(--pthalo-green);
   color: lightgray;
   background-color: rgb(48, 47, 47);
 }
