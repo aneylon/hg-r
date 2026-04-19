@@ -7,7 +7,7 @@ const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
 
-  const { setOutOfDate } = useContext(VersionContext);
+  // const { setOutOfDate } = useContext(VersionContext);
 
   const request = async (url, method, body) => {
     setIsLoading(true);
