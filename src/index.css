@@ -16,6 +16,10 @@
   color: #a1a19b;
 }
 
+.spring {
+  color: white;
+}
+
 .errorText {
   color: var(--burnt-sienna);
 }

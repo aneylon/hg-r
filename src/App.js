@@ -17,6 +17,7 @@ import Campaign from "./Components/AureliaSancta/Campaign";
 import Modal from "./Components/Modal/Modal";
 import VersionModal from "./Components/Modal/VersionModal";
 import SignUp from "./Components/Auth/SignUp";
+import Spring from "./Components/Seasons/Spring";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { user } = useUser();
@@ -35,11 +36,15 @@ function App() {
       <Warbands />
       <Warband />
       */}
+      <Spring />
+      {/*
       <LocationAdd />
       <Campaign />
       <About />
       <Version />
-      {/* <VersionModal /> */}
+      
+      <VersionModal /> 
+      */}
     </div>
   );
 }
