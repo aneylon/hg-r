@@ -6,7 +6,7 @@ const SignUp = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
-  const { error, isLoading, data, request } = useFetch();
+  const { error, isLoading, request } = useFetch(); // data?
 
   const valid = () => {
     if (
