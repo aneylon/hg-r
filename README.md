@@ -1,6 +1,10 @@
 # Honor and Glory
 
-A Game
+[![Netlify Status](https://api.netlify.com/api/v1/badges/936f2c89-38f0-4c33-aa0e-5884ab996339/deploy-status)](https://app.netlify.com/projects/honor-and-glory/deploys)
+
+[Live site](https://honor-and-glory.netlify.app/)
+
+A Game of Honor and Glory
 
 ## Setup
 
@@ -19,7 +23,7 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [x] - Set up css variables for colors
 
-- [ ] - Set up automatic deployment
+- [x] - Set up automatic deployment
 
 - [ ] - Basic html and css layout
 
@@ -28,8 +32,8 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - New game
 - [ ] - Existing game
 
-- [ ] - Locations
-- [ ] - Size and Locations properties
+- [x] - Locations
+- [x] - Size and Locations properties
 
 - [ ] - DB Mapping
   - [ ] - User - email - password - id
