@@ -4,18 +4,25 @@ import LogOut from "./Components/Auth/Logout";
 import { useUser } from "./Context/UserContext";
 
 import SignUp from "./Components/Auth/SignUp";
-import Spring from "./Components/Seasons/Spring";
-import Fall from "./Components/Seasons/Fall";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import { Routes, Route } from "react-router";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   const { user } = useUser();
   return (
     <div>
       <h1>Honor and Glory</h1>
-      <div>{user ? <LogOut /> : <LogIn />}</div>
-      <SignUp />
-      <Spring />
-      <Fall />
+      <div>{user ? <LogOut /> : null}</div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

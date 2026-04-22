@@ -27,7 +27,8 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [ ] - Basic html and css layout
 
-- [ ] - Add Routing
+- [x] - Add Routing
+- [ ] - Add Navigation
 - [ ] - Add skeleton frame for game
 - [ ] - New game
 - [ ] - Existing game

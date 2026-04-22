@@ -5,15 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { UserProvider } from "./Context/UserContext";
 import VersionContextProvider from "./Context/VersionContext";
+import { BrowserRouter } from "react-router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <VersionContextProvider>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </VersionContextProvider>
+    <BrowserRouter>
+      <VersionContextProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </VersionContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 );
 
