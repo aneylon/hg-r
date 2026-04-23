@@ -8,12 +8,14 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import { Routes, Route } from "react-router";
 import NotFound from "./Components/NotFound/NotFound";
+import Navigation from "./Components/Navigation/Navigation";
 
 function App() {
   const { user } = useUser();
   return (
     <div>
       <h1>Honor and Glory</h1>
+      <Navigation />
       <div>{user ? <LogOut /> : null}</div>
 
       <Routes>

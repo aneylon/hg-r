@@ -24,6 +24,15 @@
   color: var(--burnt-sienna);
 }
 
+a {
+  text-decoration: none;
+}
+
+a.active {
+  color: var(--yellow-ochre);
+  text-decoration: underline;
+}
+
 .input-field {
   border: none;
   border-bottom: 2px solid var(--pthalo-green);
