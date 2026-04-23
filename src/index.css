@@ -24,6 +24,12 @@
   color: var(--burnt-sienna);
 }
 
+nav a {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+
 a {
   text-decoration: none;
 }

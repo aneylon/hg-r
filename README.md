@@ -28,8 +28,8 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - Basic html and css layout
 
 - [x] - Add Routing
-- [ ] - Add Navigation
-- [ ] - Add Redirects or other solution for netlify routing issue
+- [x] - Add Navigation
+- [x] - Add Redirects or other solution for netlify routing issue
     https://docs.netlify.com/manage/routing/redirects/overview/
 
 - [ ] - Add skeleton frame for game
