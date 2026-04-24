@@ -41,11 +41,15 @@ In user settings ( settings.json) add the following line to enable type checking
 
 - [ ] - DB Mapping
   - [ ] - User - email - password - id
-  - [ ] - Campaign - id - owner - name
-  - [ ] - Warbands - id - name - owner - type
-  - [ ] - Locations - id - map id - size - location - name - description - boon - curse - occupier
-  - [ ] - Maps - id - name - owner - campaign
-    - [ ] - how to store image file?
+  - [ ] - Honor and glory
+    - [ ] - HG game - id - user id - name - game type
+    - [ ] - HG Game Event - id - game id - text - user text
+  - [ ] - AS
+    - [ ] - Campaign - id - owner - name
+    - [ ] - Warbands - id - name - owner - type
+    - [ ] - Locations - id - map id - size - location - name - description - boon - curse - occupier
+    - [ ] - Maps - id - name - owner - campaign
+      - [ ] - how to store image file?
 
 - [x] - Borderlands sheet
   - [x] - Character sheet

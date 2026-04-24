@@ -16,6 +16,10 @@
   color: #a1a19b;
 }
 
+.externalLink {
+  text-decoration: underline;
+}
+
 .spring {
   color: white;
 }
