@@ -3,7 +3,7 @@ const About = () => {
     <div>
       <div>
         <h1>About</h1>
-        <p>
+        <p className="dropCap">
           A project for solo role playing based on the ideas of{" "}
           <a
             className="externalLink"
@@ -35,7 +35,7 @@ const About = () => {
       </div>
       <div>
         <h3>Code</h3>
-        <p>
+        <p className="dropCap">
           Project code can be found{" "}
           <a className="externalLink" href="https://github.com/aneylon/hg-r">
             here
