@@ -29,9 +29,19 @@ const Settings = () => {
     }
   };
 
-  const exportSettings = () => {
+  const exportSettings = async () => {
     console.log("exporting settings");
-    console.log({ fileData });
+    let someData = { one: 1, two: 2 };
+    let jsonData = JSON.stringify(someData);
+    const fileHandle = await window.showSaveFilePicker();
+
+    const writableStream = await fileHandle.createWritable();
+
+    await writableStream.write(jsonData);
+
+    await writableStream.close();
+    console.log("done");
+    // console.log({ fileData });
   };
 
   const loadSettings = () => {
