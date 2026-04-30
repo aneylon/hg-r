@@ -21,6 +21,10 @@ In user settings ( settings.json) add the following line to enable type checking
 
 ## Todo
 
+- [x] - Settings
+  - [ ] - read json
+  - [ ] - write json
+
 - [x] - Set up css variables for colors
 
 - [x] - Set up automatic deployment

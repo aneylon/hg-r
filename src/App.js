@@ -9,6 +9,7 @@ import About from "./Components/About/About";
 import { Routes, Route } from "react-router";
 import NotFound from "./Components/NotFound/NotFound";
 import Navigation from "./Components/Navigation/Navigation";
+import Settings from "./Components/Settings/Settings";
 
 function App() {
   const { user } = useUser();
@@ -17,7 +18,7 @@ function App() {
       <h1>Honor and Glory</h1>
       <Navigation />
       <div>{user ? <LogOut /> : null}</div>
-
+      <Settings />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
