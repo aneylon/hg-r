@@ -21,6 +21,8 @@ In user settings ( settings.json) add the following line to enable type checking
 
 ## Todo
 
+- [ ] - Split General map and A.S.
+
 - [x] - Settings
   - [x] - read json
   - [x] - write json
