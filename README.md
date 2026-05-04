@@ -22,11 +22,12 @@ In user settings ( settings.json) add the following line to enable type checking
 ## Todo
 
 - [ ] - Split General map and A.S.
+- [ ] - Remove api calls from A.S.
+- [ ] - Store info in local storage with settings
 
 - [x] - Settings
   - [x] - read json
   - [x] - write json
-  - [ ] - refactor api calls to make updates to settings
 
 - [x] - Set up css variables for colors
 
