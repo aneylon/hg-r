@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router";
 import NotFound from "./Components/NotFound/NotFound";
 import Navigation from "./Components/Navigation/Navigation";
 import Settings from "./Components/Settings/Settings";
+import Game from "./Components/Game/Game";
 
 function App() {
   const { user } = useUser();
@@ -21,6 +22,7 @@ function App() {
       <Settings />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/game" element={<Game />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/about" element={<About />} />
