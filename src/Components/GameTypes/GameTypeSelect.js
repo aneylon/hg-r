@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import useFetch from "../../Hooks/useFetch";
 
-const GameTypeSelect = () => {
+const GameTypeSelect = ({ changeGameType }) => {
   const { request, error, isLoading, data } = useFetch();
 
+  const selectGameType = (selectedGameType) => {
+    changeGameType(selectedGameType);
+  };
+
   useEffect(() => {
-    console.log("get game types");
     request("http://localhost:4200/gameTypes", "GET");
   }, []);
   return (
@@ -16,8 +19,12 @@ const GameTypeSelect = () => {
           <h2>...Loading...</h2>
         </div>
       )}
-      {!isLoading && (
-        <select name="gameType" id="gameType">
+      {data && (
+        <select
+          name="gameType"
+          id="gameType"
+          onChange={(e) => selectGameType(e.target.value)}
+        >
           {data.map((item) => {
             return (
               <option key={item.id} value={item.title}>

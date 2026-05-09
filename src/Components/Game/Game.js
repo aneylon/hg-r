@@ -12,6 +12,10 @@ const Game = () => {
     setNewGame(true);
   };
 
+  const changeGameType = (gt) => {
+    setGameType(gt);
+  };
+
   const createNewGame = () => {
     console.log("create new game", gameType);
   };
@@ -26,7 +30,7 @@ const Game = () => {
       <button onClick={selectNewGame}>New Game</button>
       {newGame && (
         <div>
-          <GameTypeSelect />
+          <GameTypeSelect changeGameType={changeGameType} />
           <button onClick={createNewGame}>Create New Game</button>
         </div>
       )}
