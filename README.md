@@ -1,5 +1,7 @@
 # Honor and Glory
 
+### A game of fantastical adventure role playing
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/936f2c89-38f0-4c33-aa0e-5884ab996339/deploy-status)](https://app.netlify.com/projects/honor-and-glory/deploys)
 
 [Live site](https://honor-and-glory.netlify.app/)
