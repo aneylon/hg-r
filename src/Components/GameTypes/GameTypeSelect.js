@@ -11,6 +11,7 @@ const GameTypeSelect = ({ changeGameType }) => {
   useEffect(() => {
     request("http://localhost:4200/gameTypes", "GET");
   }, []);
+
   return (
     <div>
       <h2>Game Type select</h2>

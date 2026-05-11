@@ -74,6 +74,11 @@ In user settings ( settings.json) add the following line to enable type checking
   - [ ] - Add Jest Testing
     - [ ] - Configure to run both kinds of tests separately
 
+- [ ] - Server
+- [ ] - connect to database
+- [ ] - Api endpoints
+- [ ] - user auth
+
 ## Testing
 
 Using :
