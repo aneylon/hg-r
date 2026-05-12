@@ -4,8 +4,9 @@ import { getStuff, getThing } from "../../api/testAction";
 import useFetch from "../../Hooks/useFetch";
 
 const GameList = () => {
-  const { request, error, data, isLoading } = useFetch();
-  const [gameList, setGameList] = useState([
+  // const { request, error, data, isLoading } = useFetch();
+  const [gameList] = useState([
+    // , setGameList
     { id: 1, title: "Mythic Britain" },
     { id: 2, title: "Weird Fantasy" },
     { id: 3, title: "Mythic Eastern Fantasy" },
@@ -20,7 +21,7 @@ const GameList = () => {
     let thing = getThing();
     console.log(thing);
 
-    request("http://localhost:4200/test");
+    // request("http://localhost:4200/test");
 
     //TODO : handle error?
     // let stuff = getStuff();

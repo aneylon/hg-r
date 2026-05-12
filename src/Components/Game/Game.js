@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import GameList from "../GameTypes/GameList";
 import GameTypeSelect from "../GameTypes/GameTypeSelect";
 
 const Game = () => {
@@ -22,6 +21,8 @@ const Game = () => {
 
   useEffect(() => {
     console.log("load games");
+    // TODO : api request to get saved games.
+    setOldGames([]);
   }, []);
 
   return (
@@ -34,7 +35,7 @@ const Game = () => {
           <button onClick={createNewGame}>Create New Game</button>
         </div>
       )}
-      {oldGames && (
+      {oldGames && oldGames.length > 0 && (
         <div>
           <select name="oldGames" id="oldGames">
             <option value=""></option>

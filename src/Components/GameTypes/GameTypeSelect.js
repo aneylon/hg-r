@@ -15,6 +15,11 @@ const GameTypeSelect = ({ changeGameType }) => {
   return (
     <div>
       <h2>Game Type select</h2>
+      {error && (
+        <div className="errorText">
+          Error getting game types: {error.message}
+        </div>
+      )}
       {isLoading && (
         <div>
           <h2>...Loading...</h2>

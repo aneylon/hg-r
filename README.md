@@ -23,6 +23,9 @@ In user settings ( settings.json) add the following line to enable type checking
 
 ## Todo
 
+- [ ] - set up use of JS DOC
+- [ ] - Set up linting to know if build will fail on deployment to netlify
+
 - [ ] - Split General map and A.S.
 - [ ] - Remove api calls from A.S.
 - [ ] - Store info in local storage with settings
