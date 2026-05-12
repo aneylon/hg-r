@@ -10,6 +10,8 @@ const GameTypeSelect = ({ changeGameType }) => {
 
   useEffect(() => {
     request("http://localhost:4200/gameTypes", "GET");
+    // TODO : Find a better solution to this
+    // eslint-disable-next-line
   }, []);
 
   return (
