@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
+
+const morgan = require("morgan");
 const port = 4200;
 
 const user = require("./routes/user");
+
+app.use(morgan("dev"));
 
 app.use("/user", user);
 
