@@ -16,7 +16,7 @@ function App() {
   const { user } = useUser();
   return (
     <div>
-      <h1>Honor and Glory</h1>
+      <h1 className="mfc-font">Honor and Glory</h1>
       <h3>A game of fantastical adventure role playing</h3>
       <hr />
       <Navigation />
