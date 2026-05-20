@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <h1 className="mfc-font">Honor and Glory</h1>
-      <h3>A game of fantastical adventure role playing</h3>
+      <h3 className="elr">A game of fantastical adventure role playing</h3>
       <hr />
       <Navigation />
       <div>{user ? <LogOut /> : null}</div>

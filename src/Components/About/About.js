@@ -2,8 +2,8 @@ const About = () => {
   return (
     <div>
       <div>
-        <h1>About</h1>
-        <p className="dropCap">
+        <h1 className="mfc-font">About</h1>
+        <p className="dropCap elr">
           A project for solo role playing based on the ideas of{" "}
           <a
             className="externalLink"
