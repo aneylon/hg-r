@@ -11,6 +11,23 @@
       "password": "test"
     }
   ],
+  "prompts": [
+    {
+      "id": 1,
+      "gameTypeId": 1,
+      "prompt": "Something something"
+    },
+    {
+      "id": 2,
+      "gameTypeId": 1,
+      "prompt": "Nothing nothing"
+    },
+    {
+      "id": 3,
+      "gameTypeId": 1,
+      "prompt": "Another thing"
+    }
+  ],
   "gameTypes": [
     {
       "id": "1",
