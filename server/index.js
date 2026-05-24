@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
 
+const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const port = 4200;
 
 const user = require("./routes/user");
 const game = require("./routes/game");
 
+app.use(bodyParser.json());
 app.use(morgan("dev"));
 
 app.use("/user", user);
