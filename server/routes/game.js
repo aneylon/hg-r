@@ -27,8 +27,10 @@ router.post("/newGame", (req, res) => {
   res.send("new game : " + gameTypeId);
 });
 
-router.get("/", (req, res) => {
-  res.send("get games");
+router.post("/", (req, res) => {
+  const { userId } = req.body;
+  console.log("get games for user : ", userId);
+  res.send("get games for user : " + userId);
 });
 
 router.get("/gameTypes", (req, res) => {
