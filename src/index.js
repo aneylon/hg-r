@@ -6,17 +6,21 @@ import reportWebVitals from "./reportWebVitals";
 import { UserProvider } from "./Context/UserContext";
 import VersionContextProvider from "./Context/VersionContext";
 import { BrowserRouter } from "react-router";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <VersionContextProvider>
-        <UserProvider>
-          <App />
-        </UserProvider>
-      </VersionContextProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <VersionContextProvider>
+          <UserProvider>
+            <App />
+          </UserProvider>
+        </VersionContextProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 );
 

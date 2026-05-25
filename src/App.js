@@ -11,6 +11,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Navigation from "./Components/Navigation/Navigation";
 import Settings from "./Components/Settings/Settings";
 import Game from "./Components/Game/Game";
+import { Counter } from "./Components/Reduxed/counter/counter";
 
 function App() {
   const { user } = useUser();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
+      <Counter />
     </div>
   );
 }

@@ -23,6 +23,8 @@ In user settings ( settings.json) add the following line to enable type checking
 
 ## Todo
 
+- [ ] - npm audit / fix security issues
+
 - [ ] - set up use of JS DOC
 - [ ] - Set up linting to know if build will fail on deployment to netlify
 
