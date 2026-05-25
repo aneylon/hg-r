@@ -5,9 +5,12 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const port = 4200;
 
+const timeLogging = require("./middleware/timeLogging");
+
 const user = require("./routes/user");
 const game = require("./routes/game");
 
+app.use(timeLogging);
 app.use(bodyParser.json());
 app.use(morgan("dev"));
 
