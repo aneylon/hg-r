@@ -33,6 +33,13 @@ router.post("/", (req, res) => {
   res.send("get games for user : " + userId);
 });
 
+router.post("/update/:gameId", (req, res) => {
+  const { updateInfo } = req.body;
+  const { gameId } = req.params;
+  console.log("update game : ", gameId, 'with info " ', { updateInfo });
+  res.send("update game : " + gameId);
+});
+
 router.get("/gameTypes", (req, res) => {
   res.send(gameTypes);
 });
