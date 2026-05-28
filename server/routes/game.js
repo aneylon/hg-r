@@ -22,8 +22,9 @@ const gameTypes = [
 
 router.post("/newGame", (req, res) => {
   console.log(req.body);
-  const { gameTypeId } = req.body;
-  console.log("new game", gameTypeId);
+  const { gameTypeId, userId, gameName } = req.body;
+  console.log("new game", gameTypeId, userId, gameName);
+  // return the new game id / info
   res.send("new game : " + gameTypeId);
 });
 
