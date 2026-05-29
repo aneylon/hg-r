@@ -11,6 +11,13 @@ router.get("/:id", (req, res) => {
   res.send("return user id : " + id);
 });
 
+router.post("/:id", (req, res) => {
+  const { user } = req.body;
+  const { id } = req.params;
+  console.log({ user });
+  res.send("update user : " + id);
+});
+
 router.post("/signin", (req, res) => {
   res.send("sign in existing user");
 });
