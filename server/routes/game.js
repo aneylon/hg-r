@@ -28,8 +28,8 @@ router.post("/newGame", (req, res) => {
   res.send("new game : " + gameTypeId);
 });
 
-router.post("/", (req, res) => {
-  const { userId } = req.body;
+router.get("/:userId", (req, res) => {
+  const { userId } = req.params;
   console.log("get games for user : ", userId);
   res.send("get games for user : " + userId);
 });
