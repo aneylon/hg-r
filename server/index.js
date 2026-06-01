@@ -10,6 +10,7 @@ const timeLogging = require("./middleware/timeLogging");
 
 const user = require("./routes/user");
 const game = require("./routes/game");
+const comment = require("./routes/comment");
 
 app.use(timeLogging);
 app.use(bodyParser.json());
@@ -17,6 +18,7 @@ app.use(morgan("dev"));
 
 app.use("/user", user);
 app.use("/game", game);
+app.use("/comment", comment);
 
 app.get("/", (req, res) => {
   res.send("Honor and Glory! (server)");
