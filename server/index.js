@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express();
 
 const bodyParser = require("body-parser");
@@ -21,6 +22,11 @@ app.get("/", (req, res) => {
   res.send("Honor and Glory! (server)");
 });
 
-app.listen(port, () => {
-  console.log(`HG-Server running on port : ${port}`);
-});
+mongoose
+  .connect("mongodb://localhost:27017/honorandglory")
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`HG-Server running on port : ${port}`);
+    });
+  })
+  .catch((error) => console.error(error));
