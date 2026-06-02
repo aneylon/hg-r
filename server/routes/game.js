@@ -28,6 +28,18 @@ router.post("/newGame", (req, res) => {
   res.send("new game : " + gameTypeId);
 });
 
+router.post("/session", (req, res) => {
+  const { session } = req.body;
+  console.log({ session });
+  res.send("add new game session to existing game. ");
+});
+
+router.get("/session/:gameId", (req, res) => {
+  const { gameId } = req.params;
+  console.log("get session for game");
+  res.send("send back sessions for game");
+});
+
 router.get("/:userId", (req, res) => {
   const { userId } = req.params;
   console.log("get games for user : ", userId);
