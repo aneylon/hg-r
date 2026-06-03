@@ -57,4 +57,12 @@ router.get("/gameTypes", (req, res) => {
   res.send(gameTypes);
 });
 
+router.post("/gameTypes", (req, res) => {
+  const newGameType = {
+    title: req.body.title,
+  };
+  console.log("add", { newGameType });
+  res.send("added new game type : " + newGameType.title);
+});
+
 module.exports = router;
