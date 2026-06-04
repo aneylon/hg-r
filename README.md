@@ -21,6 +21,9 @@ In user settings ( settings.json) add the following line to enable type checking
   REACT_APP_VERSION = Current Version ( ex: 0.0.1a)
 ```
 
+- [JS DOC](https://jsdoc.app/)
+- [JS DOC Cheat Sheet](https://devhints.io/jsdoc)
+
 ## Todo
 
 - [ ] - npm audit / fix security issues
