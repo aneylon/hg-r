@@ -12,6 +12,7 @@ import Navigation from "./Components/Navigation/Navigation";
 import Settings from "./Components/Settings/Settings";
 import Game from "./Components/Game/Game";
 import { Counter } from "./Components/Reduxed/counter/counter";
+import { Example } from "./Components/Reduxed/example/example";
 
 function App() {
   const { user } = useUser();
@@ -32,6 +33,7 @@ function App() {
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Counter />
+      <Example />
     </div>
   );
 }
