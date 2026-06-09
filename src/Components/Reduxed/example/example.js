@@ -34,7 +34,14 @@ export function Example() {
         <h2>teh list</h2>
         <ul>
           {list.map((item, i) => {
-            return <li key={i}>{item}</li>;
+            return (
+              <li key={i}>
+                {item}{" "}
+                <button onClick={() => dispatch(removeItemAtIndex(i))}>
+                  x
+                </button>
+              </li>
+            );
           })}
         </ul>
       </div>
