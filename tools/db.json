@@ -130,5 +130,6 @@
       "controllingWarband": "2"
     }
   ],
+  "example": [{ "text": "one" }, { "text": "two" }, { "text": "three" }],
   "$schema": "./node_modules/json-server/schema.json"
 }

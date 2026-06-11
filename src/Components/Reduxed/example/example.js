@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 
+import { useThunk } from "../../../Hooks/useThunk";
+
 import { addItem, removeItemAtIndex } from "./exampleSlice";
+import { fetchExample } from "./thunks/fetchExample";
 
 export function Example() {
+  const [doFetchExample, isLoadingExample, loadingExampleError] =
+    useThunk(fetchExample);
+
   const dispatch = useDispatch();
   const list = useSelector((state) => {
     console.log(state);
@@ -16,6 +22,11 @@ export function Example() {
     // todo: wait?
     setNewItem("");
   };
+
+  useEffect(() => {
+    doFetchExample();
+  }, [doFetchExample]);
+
   return (
     <div>
       <h1>This an example</h1>
@@ -32,12 +43,17 @@ export function Example() {
       </div>
       <div>
         <h2>teh list</h2>
+        {loadingExampleError && (
+          <div className="errorText">Error : {loadingExampleError.message}</div>
+        )}
+        {isLoadingExample && <div>...loading...</div>}
+
         <ul>
-          {list.map((item, i) => {
+          {list.map((item) => {
             return (
-              <li key={i}>
-                {item}{" "}
-                <button onClick={() => dispatch(removeItemAtIndex(i))}>
+              <li key={item.id}>
+                {item.text}
+                <button onClick={() => dispatch(removeItemAtIndex(item.id))}>
                   x
                 </button>
               </li>
