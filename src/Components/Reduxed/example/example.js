@@ -6,10 +6,13 @@ import { useThunk } from "../../../Hooks/useThunk";
 
 import { addItem, removeItemAtIndex } from "./exampleSlice";
 import { fetchExample } from "./thunks/fetchExample";
+import { addExample } from "./thunks/addExample";
 
 export function Example() {
   const [doFetchExample, isLoadingExample, loadingExampleError] =
     useThunk(fetchExample);
+  const [doAddExample, isLoadingAddExample, addExampleError] =
+    useThunk(addExample);
 
   const dispatch = useDispatch();
   const list = useSelector((state) => {
@@ -18,7 +21,8 @@ export function Example() {
   });
   const [newItem, setNewItem] = useState("");
   const addNewItem = () => {
-    dispatch(addItem(newItem));
+    // dispatch(addItem(newItem));
+    doAddExample(newItem);
     // todo: wait?
     setNewItem("");
   };

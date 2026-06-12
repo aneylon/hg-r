@@ -1,5 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
+import { pause } from "./pause";
+
 const fetchExample = createAsyncThunk("example/fetch", async () => {
   // TODO : Switch to AXIOS?
   const response = await fetch("http://localhost:4200/example");
@@ -17,9 +19,3 @@ const fetchExample = createAsyncThunk("example/fetch", async () => {
 });
 
 export { fetchExample };
-
-const pause = (duration) => {
-  return new Promise((resolve) => {
-    setTimeout(resolve, duration);
-  });
-};

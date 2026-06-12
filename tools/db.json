@@ -13,17 +13,17 @@
   ],
   "prompts": [
     {
-      "id": 1,
+      "id": "1",
       "gameTypeId": 1,
       "prompt": "Something something"
     },
     {
-      "id": 2,
+      "id": "2",
       "gameTypeId": 1,
       "prompt": "Nothing nothing"
     },
     {
-      "id": 3,
+      "id": "3",
       "gameTypeId": 1,
       "prompt": "Another thing"
     }
@@ -130,6 +130,32 @@
       "controllingWarband": "2"
     }
   ],
-  "example": [{ "text": "one" }, { "text": "two" }, { "text": "three" }],
+  "example": [
+    {
+      "text": "one",
+      "id": "5fa2"
+    },
+    {
+      "text": "two",
+      "id": "287f"
+    },
+    {
+      "text": "three",
+      "id": "3361"
+    },
+    {
+      "id": "506f",
+      "gameTypeId": 1234,
+      "userId": 4321,
+      "gameName": "The Name of the Game.",
+      "updateInfo": {
+        "something": "nothing"
+      },
+      "user": {
+        "email": "a@b.com",
+        "password": "asdf1234!"
+      }
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

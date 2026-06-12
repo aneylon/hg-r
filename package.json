@@ -1,6 +1,7 @@
 {
   "name": "hg-r",
   "version": "0.1.01a",
+  "proxy": "http://localhost:4200",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
