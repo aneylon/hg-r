@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const port = 4200;
@@ -11,7 +11,9 @@ const timeLogging = require("./middleware/timeLogging");
 const user = require("./routes/user");
 const game = require("./routes/game");
 const comment = require("./routes/comment");
+const example = require("./routes/example");
 
+app.use(cors());
 app.use(timeLogging);
 app.use(bodyParser.json());
 app.use(morgan("dev"));
@@ -19,6 +21,7 @@ app.use(morgan("dev"));
 app.use("/user", user);
 app.use("/game", game);
 app.use("/comment", comment);
+app.use("/example", example);
 
 app.get("/", (req, res) => {
   res.send("Honor and Glory! (server)");

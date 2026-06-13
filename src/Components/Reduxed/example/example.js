@@ -7,12 +7,15 @@ import { useThunk } from "../../../Hooks/useThunk";
 import { addItem, removeItemAtIndex } from "./exampleSlice";
 import { fetchExample } from "./thunks/fetchExample";
 import { addExample } from "./thunks/addExample";
+import { removeExample } from "./thunks/removeExample";
 
 export function Example() {
   const [doFetchExample, isLoadingExample, loadingExampleError] =
     useThunk(fetchExample);
   const [doAddExample, isLoadingAddExample, addExampleError] =
     useThunk(addExample);
+  const [doRemoveExample, isLoadingRemoveExample, removeExampleError] =
+    useThunk(removeExample);
 
   const dispatch = useDispatch();
   const list = useSelector((state) => {
@@ -57,9 +60,7 @@ export function Example() {
             return (
               <li key={item.id}>
                 {item.text}
-                <button onClick={() => dispatch(removeItemAtIndex(item.id))}>
-                  x
-                </button>
+                <button onClick={() => doRemoveExample(item.id)}>x</button>
               </li>
             );
           })}
