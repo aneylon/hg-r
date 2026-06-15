@@ -25,7 +25,7 @@ export function Example() {
   const [newItem, setNewItem] = useState("");
   const addNewItem = () => {
     // dispatch(addItem(newItem));
-    doAddExample(newItem);
+    doAddExample({ newItem });
     // todo: wait?
     setNewItem("");
   };

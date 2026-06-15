@@ -10,6 +10,9 @@ const addExample = createAsyncThunk("example/add", async (newExample) => {
   const response = await fetch("http://localhost:4200/example", {
     method: "POST",
     body: JSON.stringify(newExample),
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
   let data = null;
   console.log("two");
