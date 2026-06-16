@@ -29,5 +29,9 @@ router.post("/", (req, res) => {
 
 // TODO : Delete Route
 // Delete from mongo
+router.delete("/:id", (req, res) => {
+  let { id } = req.params;
+  res.send("delete id : " + id);
+});
 
 module.exports = router;
