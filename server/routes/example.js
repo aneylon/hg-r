@@ -1,4 +1,5 @@
 const express = require("express");
+const Example = require("../models/Example");
 const router = express.Router();
 
 let examples = [
@@ -19,11 +20,12 @@ router.get("/", (req, res) => {
   res.send(examples);
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   let { newItem } = req.body;
   console.log({ newItem });
+  let example = await Example.create({ text: newItem });
   // TODO : save to mongo
-  console.log("testrers");
+  console.log("testrers", example);
   res.send({ one: "1" });
 });
 
