@@ -9,15 +9,21 @@ let examples = [
   { id: 4, text: "four" },
 ];
 
-router.get("/:id", (req, res) => {
+router.get("/:id", async (req, res) => {
   const { id } = req.params;
   // TODO : get from mongo
-  res.send("Get comment for id : ", id);
+  const example = await Example.findById(id);
+
+  // res.send("Get comment for id : ", id);
+  res.status(200).json(example);
 });
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   // TODO : get from mongo
-  res.send(examples);
+  const examples = await Example.find();
+
+  // res.send(examples);
+  res.status(200).json(examples);
 });
 
 router.post("/", async (req, res) => {
