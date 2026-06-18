@@ -4,10 +4,13 @@ export const exampleApi = createApi({
   reducerPath: "exampleApi",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost/" }),
   endpoints: (builder) => ({
-    getExampleById: builder.query({
-      query: (id) => `example/${id}`,
+    // getExampleById: builder.query({
+    //   query: (id) => `example/${id}`,
+    // }),
+    getExampleByText: builder.query({
+      query: (text) => `example/text/#{text}`,
     }),
   }),
 });
-
-export const { useGetPokemonByNameQuery } = exampleApi;
+console.log("here", exampleApi);
+export const { useGetExampleByTextQuery } = exampleApi;

@@ -13,6 +13,7 @@ import Settings from "./Components/Settings/Settings";
 import Game from "./Components/Game/Game";
 import { Counter } from "./Components/Reduxed/counter/counter";
 import { Example } from "./Components/Reduxed/example/example";
+import RTK_EXAMPLE from "./Components/Reduxed/example/rtk_example";
 
 function App() {
   const { user } = useUser();
@@ -34,6 +35,7 @@ function App() {
       </Routes>
       <Counter />
       <Example />
+      <RTK_EXAMPLE />
     </div>
   );
 }
