@@ -89,6 +89,12 @@ In user settings ( settings.json) add the following line to enable type checking
 - [ ] - Api endpoints
 - [ ] - user auth
 
+## Links
+
+[React](https://react.dev/)
+
+[Redux Toolkit](https://redux-toolkit.js.org/)
+
 ## Testing
 
 Using :
