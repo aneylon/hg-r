@@ -13,9 +13,16 @@ router.get("/:id", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const examples = await Example.find();
+  try {
+    const examples = await Example.find();
 
-  res.status(200).json(examples);
+    res.status(200).json(examples);
+  } catch (error) {
+    res.status(500).json({
+      message: "Error getting examples",
+      error: error,
+    });
+  }
 });
 
 router.post("/", async (req, res) => {
