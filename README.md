@@ -69,6 +69,10 @@ In user settings ( settings.json) add the following line to enable type checking
     - [ ] - Maps - id - name - owner - campaign
       - [ ] - how to store image file?
 
+- [ ] - Game Mappings
+  - [ ] Round (Name and theme)
+    - [ ] Phase (Spring, Summer, Fall, Winter)
+
 - [x] - Borderlands sheet
   - [x] - Character sheet
 
