@@ -19,4 +19,4 @@ const gameDataSchema = new Schema({
   ],
 });
 
-module.exports = mongoose.model("GameData", gameDataSchema);
+module.exports = mongoose.model("GameRound", gameDataSchema);
