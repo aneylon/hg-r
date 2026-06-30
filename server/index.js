@@ -12,6 +12,7 @@ const user = require("./routes/user");
 const game = require("./routes/game");
 const comment = require("./routes/comment");
 const example = require("./routes/example");
+const message = require("./routes/message");
 
 app.use(cors());
 app.use(timeLogging);
@@ -22,6 +23,7 @@ app.use("/user", user);
 app.use("/game", game);
 app.use("/comment", comment);
 app.use("/example", example);
+app.use("/message", message);
 
 app.get("/", (req, res) => {
   res.send("Honor and Glory! (server)");
