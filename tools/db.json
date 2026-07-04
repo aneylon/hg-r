@@ -3,12 +3,14 @@
     {
       "id": "1",
       "email": "admin@test.com",
-      "password": "test"
+      "password": "test",
+      "userName": "Admin"
     },
     {
       "id": "84c7",
       "email": "test@t",
-      "password": "test"
+      "password": "test",
+      "userName": "Tester"
     }
   ],
   "message": [

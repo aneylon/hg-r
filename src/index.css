@@ -108,3 +108,8 @@ a.active {
   text-decoration: none;
   cursor: pointer;
 }
+
+.formElement {
+  margin: 3px;
+  padding: 3px;
+}

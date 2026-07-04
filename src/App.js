@@ -14,6 +14,7 @@ import Game from "./Components/Game/Game";
 import { Counter } from "./Components/Reduxed/counter/counter";
 import { Example } from "./Components/Reduxed/example/example";
 import RTK_EXAMPLE from "./Components/Reduxed/example/rtk_example";
+import Messages from "./Components/Messages/Messages";
 
 function App() {
   const { user } = useUser();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/game" element={<Game />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/messages" element={<Messages />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
