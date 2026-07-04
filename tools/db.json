@@ -11,6 +11,15 @@
       "password": "test"
     }
   ],
+  "message": [
+    {
+      "id": 1,
+      "title": "a title",
+      "content": "message content",
+      "authorId": 123,
+      "recipientId": 321
+    }
+  ],
   "prompts": [
     {
       "id": "1",

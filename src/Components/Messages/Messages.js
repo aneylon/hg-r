@@ -3,6 +3,8 @@ import useFetch from "../../Hooks/useFetch";
 
 const Messages = () => {
   // TODO : get message from server.
+  const userId = 123; // TODO : get user id from logged in user
+
   const {
     data: userData,
     isLoading: userIsLoading,
@@ -10,9 +12,17 @@ const Messages = () => {
     request: userRequest,
   } = useFetch();
 
+  const {
+    data: messageData,
+    isLoading: messageIsLoading,
+    error: messageError,
+    request: messageRequest,
+  } = useFetch();
+
   useEffect(() => {
     console.log("get them users");
     userRequest("http://localhost:4200/user");
+    messageRequest(`http://localhost:4200/message/${userId}`);
   }, []);
   // Create New message component
 
