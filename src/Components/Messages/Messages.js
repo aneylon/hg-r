@@ -31,7 +31,7 @@ const Messages = () => {
     request: messageRequest,
   } = useFetch();
 
-  const sendNewMessage = () => {
+  const sendNewMessage = async () => {
     const newMessage = {
       newMessageTitle,
       newMessageContent,
@@ -39,8 +39,13 @@ const Messages = () => {
       recipient,
     };
     console.log("sending new message", newMessage);
-    // TODO : Actually send the message.
+    const result = await messageRequest(
+      "http://localhost:4200/message",
+      "POST",
+      newMessage,
+    );
     // TODO : Side effects there in...
+    console.log({ result });
   };
 
   useEffect(() => {
