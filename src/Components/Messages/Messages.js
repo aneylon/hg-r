@@ -44,8 +44,12 @@ const Messages = () => {
       "POST",
       newMessage,
     );
-    // TODO : Side effects there in...
     console.log({ result });
+    // TODO : Side effects there in...
+    // disable form when sending
+    // clear form on success
+    // reenable form
+    // refresh messages
   };
 
   useEffect(() => {
