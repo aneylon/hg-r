@@ -23,8 +23,8 @@
     },
     {
       "id": "9dc7",
-      "newMessageTitle": "test",
-      "newMessageContent": "test",
+      "title": "test",
+      "content": "test",
       "authorId": 123,
       "recipient": "1"
     }

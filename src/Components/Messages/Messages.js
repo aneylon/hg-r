@@ -33,8 +33,8 @@ const Messages = () => {
 
   const sendNewMessage = async () => {
     const newMessage = {
-      newMessageTitle,
-      newMessageContent,
+      title: newMessageTitle,
+      content: newMessageContent,
       authorId: userId,
       recipient,
     };
@@ -125,7 +125,9 @@ const Messages = () => {
         {messageData && (
           <>
             <ul>
-              <li>Message Example</li>
+              {messageData.map((message) => (
+                <li key={message.id}>message.title</li>
+              ))}
             </ul>
           </>
         )}
