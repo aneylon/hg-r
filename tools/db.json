@@ -26,7 +26,14 @@
       "title": "test",
       "content": "test",
       "authorId": 123,
-      "recipient": "1"
+      "recipientId": "1"
+    },
+    {
+      "id": "5d93",
+      "title": "Testing Tests",
+      "content": "Testers be testing tests.",
+      "authorId": 123,
+      "recipientId": "84c7"
     }
   ],
   "prompts": [

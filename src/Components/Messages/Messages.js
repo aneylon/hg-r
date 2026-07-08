@@ -36,7 +36,7 @@ const Messages = () => {
       title: newMessageTitle,
       content: newMessageContent,
       authorId: userId,
-      recipient,
+      recipientId: recipient,
     };
     console.log("sending new message", newMessage);
     const result = await messageRequest(
@@ -54,7 +54,7 @@ const Messages = () => {
 
   useEffect(() => {
     userRequest("http://localhost:4200/user");
-    messageRequest(`http://localhost:4200/message/${userId}`);
+    messageRequest(`http://localhost:4200/message?authorId:eq=${userId}`);
   }, []);
 
   return (
@@ -126,7 +126,9 @@ const Messages = () => {
           <>
             <ul>
               {messageData.map((message) => (
-                <li key={message.id}>message.title</li>
+                <li key={message.id}>
+                  {message.title} to : {message.recipientId}
+                </li>
               ))}
             </ul>
           </>
