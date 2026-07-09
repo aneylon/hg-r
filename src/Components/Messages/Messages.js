@@ -31,6 +31,13 @@ const Messages = () => {
     request: messageRequest,
   } = useFetch();
 
+  const {
+    data: sendMessageData,
+    isLoading: sendMessageIsLoading,
+    error: sendMessageError,
+    request: sendMessageRequest,
+  } = useFetch();
+
   const sendNewMessage = async () => {
     const newMessage = {
       title: newMessageTitle,
@@ -38,14 +45,16 @@ const Messages = () => {
       authorId: userId,
       recipientId: recipient,
     };
+
     console.log("sending new message", newMessage);
-    const result = await messageRequest(
+    const result = await sendMessageRequest(
       "http://localhost:4200/message",
       "POST",
       newMessage,
     );
     console.log({ result });
     // TODO : Side effects there in...
+
     // disable form when sending
     // clear form on success
     // reenable form
