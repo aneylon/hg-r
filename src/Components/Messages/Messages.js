@@ -6,6 +6,7 @@ const Messages = () => {
   const [newMessageContent, setNewMessageContent] = useState(null);
   const [newMessageTitle, setNewMessageTitle] = useState(null);
   const [recipient, setRecipient] = useState(null);
+  const [sendingMessage, setSendingMessage] = useState(false);
 
   const formIsValid = () => {
     if (
@@ -39,6 +40,7 @@ const Messages = () => {
   } = useFetch();
 
   const sendNewMessage = async () => {
+    setSendingMessage(true);
     const newMessage = {
       title: newMessageTitle,
       content: newMessageContent,
@@ -53,12 +55,14 @@ const Messages = () => {
       newMessage,
     );
     console.log({ result });
-    // TODO : Side effects there in...
+    setSendingMessage(false);
+    // TODO : if result is good.
+    setNewMessageContent("");
+    setNewMessageTitle("");
+    // TODO : is there a way to clear the recipient?
+    // setRecipient(null); // cause this don't work.
 
-    // disable form when sending
-    // clear form on success
-    // reenable form
-    // refresh messages
+    messageRequest(`http://localhost:4200/message?authorId:eq=${userId}`);
   };
 
   useEffect(() => {
@@ -116,7 +120,10 @@ const Messages = () => {
                 ></textarea>
               </div>
               <div className="formElement">
-                <button disabled={!formIsValid()} onClick={sendNewMessage}>
+                <button
+                  disabled={!formIsValid() || sendingMessage}
+                  onClick={sendNewMessage}
+                >
                   Send
                 </button>
               </div>
