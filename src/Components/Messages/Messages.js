@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useFetch from "../../Hooks/useFetch";
+import Message from "./Message";
 
 const Messages = () => {
   const userId = 123; // TODO : get user id from logged in user
@@ -7,6 +8,12 @@ const Messages = () => {
   const [newMessageTitle, setNewMessageTitle] = useState(null);
   const [recipient, setRecipient] = useState(null);
   const [sendingMessage, setSendingMessage] = useState(false);
+
+  const [selectedMessage, setSelectedMessage] = useState(null);
+
+  const selectMessage = (message) => {
+    setSelectedMessage(message);
+  };
 
   const formIsValid = () => {
     if (
@@ -141,15 +148,24 @@ const Messages = () => {
         {messageData && (
           <>
             <ul>
-              {messageData.map((message) => (
-                <li key={message.id}>
-                  {message.title} to : {message.recipientId}
-                </li>
-              ))}
+              {messageData.map((message) => {
+                console.log(message);
+                return (
+                  <li key={message.id} onClick={() => selectMessage(message)}>
+                    {message.title} to : {message.recipientId}
+                  </li>
+                );
+              })}
             </ul>
           </>
         )}
       </div>
+      {selectedMessage && (
+        <div>
+          <h1>selected message</h1>
+          <Message message={selectedMessage} />
+        </div>
+      )}
     </div>
   );
 };
