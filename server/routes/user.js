@@ -18,6 +18,8 @@ router.post("/:id", (req, res) => {
   res.send("update user : " + id);
 });
 
+// TODO : COMPLETE USER SIGN UP / SIGN IN!!!
+
 router.post("/signin", (req, res) => {
   const { email, password } = req.body;
   console.log(email, password);
