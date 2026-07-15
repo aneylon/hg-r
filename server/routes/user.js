@@ -8,16 +8,18 @@ const createToken = (_id) => {
   return jwt.sign({ _id }, secret, { expiresIn: "3d" });
 };
 
-// Require auth to get this 
-router.get("/", (req, res) => {
-  res.send("get them users");
+// Require auth to get this
+router.get("/", async (req, res) => {
+  const users = await User.find();
+  res.status(200).json(users);
 });
 
-// Require auth to get this 
-router.get("/:id", (req, res) => {
+// Require auth to get this
+router.get("/:id", async (req, res) => {
   const { id } = req.params;
-  console.log({ id });
-  res.send("return user id : " + id);
+  const user = await User.findById(id);
+
+  res.status(200).json(user);
 });
 
 // TODO : Fix this to actually work.
@@ -28,7 +30,7 @@ router.post("/:id", (req, res) => {
   res.send("update user : " + id);
 });
 
-router.post("/signin", (req, res) => {
+router.post("/signin", async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.login(email, password);
@@ -39,7 +41,7 @@ router.post("/signin", (req, res) => {
   }
 });
 
-router.post("/signup", (req, res) => {
+router.post("/signup", async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.signup(email, password);
